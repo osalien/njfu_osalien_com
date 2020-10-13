@@ -25,7 +25,7 @@
     <packaging>pom</packaging>
 
     <name>njfu-osalien-com</name>
-    <description>njfu-osalien-com Project</description>
+    <description>南京林业大学研究生课程资料管理</description>
     <url>https://github.com/osalien/njfu_osalien_com</url>
 
     <licenses>
