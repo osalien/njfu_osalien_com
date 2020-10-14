@@ -347,11 +347,12 @@ public class CodingLabApplication {
 ## Contact
  Wechat Coding实验室
 
-![Coding实验室](http://oss.osalien.com/CodingLab.jpg)
-## Donate
-Ask the author to drink coffee and let the code fly for a while! 
+<img alt="Coding实验室" src="http://oss.osalien.com/CodingLab.jpg" height="248" width="248">
 
-![Coding实验室](http://oss.osalien.com/money.jpg)
+## Donate
+Invite the author to have a cup of milk tea ~
+
+<img alt="Coding实验室" src="http://oss.osalien.com/money.jpg" height="248" width="248">
 
 ## License
 njfu-osalien-com is under the Apache 2.0 license. 

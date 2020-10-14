@@ -348,12 +348,12 @@ public class CodingLabApplication {
 ## 联系
 微信公众号 Coding实验室
 
-![Coding实验室](http://oss.osalien.com/CodingLab.jpg)
+<img alt="Coding实验室" src="http://oss.osalien.com/CodingLab.jpg" height="248" width="248">
 
 ## 赞赏
-请作者喝咖啡，让代码飞一会儿！
+请作者喝杯奶茶~
                           
-![Coding实验室](http://oss.osalien.com/money.jpg)
+<img alt="Coding实验室" src="http://oss.osalien.com/money.jpg" height="248" width="248">
 
 ## License
 njfu-osalien-com is under the Apache 2.0 license. 
