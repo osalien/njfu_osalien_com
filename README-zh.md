@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/osalien/njfu_osalien_com">
-   <img alt="spring-boot-plus logo" src="https://springboot.plus/img/logo.png">
+     <img alt="njfu logo" src="http://oss.osalien.com/njfu.jpg">
   </a>
 </p>
 <p align="center">
@@ -19,17 +19,12 @@
   </a>
 </p>
 
-### spring-boot-plus是一套集成spring boot常用开发组件的后台快速开发框架
-> Spring-Boot-Plus是易于使用，快速，高效，功能丰富，开源的spring boot 脚手架.
-
-> 前后端分离,专注于后端服务
-
 ## 目标
 > 每个人都可以独立、快速、高效地开发项目！
 
-#### [GITHUB](https://github.com/osalien/njfu_osalien_com) | [GITEE](https://gitee.com/geekidea/spring-boot-plus)
+#### [GITHUB](https://github.com/osalien/njfu_osalien_com)
 
-#### [springboot.plus](http://springboot.plus)
+#### [osalien.com](http://osalien.com)
 
 ### 主要特性
 - 集成spring boot 常用开发组件集、公共配置、AOP日志等
@@ -43,18 +38,11 @@
 - 集成spring boot admin，实时检测项目运行情况
 - 使用assembly maven插件进行不同环境打包部署,包含启动、重启命令，配置文件提取到外部config目录
 
-## [V2.0视频介绍](https://www.bilibili.com/video/BV16A41187XE/)
-<p align="center">
-  <a href="https://www.bilibili.com/video/BV16A41187XE/">
-   <img alt="spring-boot-plus videos" src="https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/videos-acfun-ui.png">
-  </a>
-</p>
-
 ## 项目结构
 ```text
-    └── spring-boot-plus
+  njfu-osalien-com
     ├── admin               SpringBootAdmin Server模块
-    ├── bootstrap           spring-boot-plus 启动模块
+    ├── bootstrap           njfu-osalien-com 启动模块
     ├── config              配置模块
     ├── distribution        打包模块
     ├── docs                文档目录
@@ -97,15 +85,13 @@ lombok | 1.18.12 | 注解生成Java Bean等工具 |
 mapstruct | 1.3.1.Final | 对象属性复制工具 |
 
 ### 项目链路图
-![项目调用链路图](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/spring-boot-plus-link-diagram.jpg)
-
-### [CHANGELOG](https://github.com/osalien/njfu_osalien_com/blob/master/CHANGELOG.md)
+![项目调用链路图](http://oss.osalien.com/link-diagram.jpg)
 
 ## 快速开始
 ### 克隆 spring-boot-plus
 ```bash
-git clone https://gitee.com/geekidea/spring-boot-plus.git
-cd spring-boot-plus
+git clone https://github.com/osalien/njfu_osalien_com.git
+cd njfu_osalien_com
 ```
 
 ### Maven 构建
@@ -155,83 +141,83 @@ INSERT INTO foo_bar (id, name, foo, bar, remark, state, version, create_time, up
 > 代码生成入口类，在generator模块中
 
 ```text
-spring-boot-plus/generator/src/main/java/io/geekidea/springbootplus/generator/SpringBootPlusGenerator.java
+njfu_osalien_com/generator/src/main/java/com/osalien/njfu/generator/CodingLabGenerator.java
 ```
 
 ```java
 /**
- * spring-boot-plus代码生成器入口类
+ * njfu_osalien_com代码生成器入口类
  *
- * @author geekidea
- * @date 2019-10-22
- **/
+* @author Coding实验室
+* @date 2019-10-22
+**/
 @Component
-public class SpringBootPlusGenerator {
+public class CodingLabGenerator {
 
-    /**
-     * 生成代码
-     * @param args
-     */
-    public static void main(String[] args) {
-        GeneratorProperties generatorProperties = new GeneratorProperties();
+ /**
+  * Generator Code
+  * @param args
+  */
+ public static void main(String[] args) {
+     GeneratorProperties generatorProperties = new GeneratorProperties();
 
-        // 设置基本信息
-        generatorProperties
-                .setMavenModuleName("example")
-                .setParentPackage("com.example")
-                .setModuleName("foobar")
-                .setAuthor("geekidea")
-                .setFileOverride(true);
+     // Common configuration
+     generatorProperties
+             .setMavenModuleName("example")
+             .setParentPackage("com.example")
+             .setModuleName("foobar")
+             .setAuthor("Coding实验室")
+             .setFileOverride(true);
 
-        // 设置表信息
-        generatorProperties.addTable("foo_bar","id");
+     // generator Table
+     generatorProperties.addTable("foo_bar","id");
 
-        // 数据源配置
-        generatorProperties.getDataSourceConfig()
-                .setDbType(DbType.MYSQL)
-                .setUsername("root")
-                .setPassword("root")
-                .setDriverName("com.mysql.jdbc.Driver")
-                .setUrl("jdbc:mysql://localhost:3306/spring_boot_plus?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
+     // DataSourceConfig
+     generatorProperties.getDataSourceConfig()
+             .setDbType(DbType.MYSQL)
+             .setUsername("root")
+             .setPassword("root")
+             .setDriverName("com.mysql.jdbc.Driver")
+             .setUrl("jdbc:mysql://localhost:3306/njfu_osalien_com?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
 
-        // 生成配置
-        generatorProperties.getGeneratorConfig()
-                .setGeneratorStrategy(GeneratorStrategy.SINGLE)
-                .setGeneratorEntity(true)
-                .setGeneratorController(true)
-                .setGeneratorService(true)
-                .setGeneratorServiceImpl(true)
-                .setGeneratorMapper(true)
-                .setGeneratorMapperXml(true)
-                .setGeneratorPageParam(true)
-                .setGeneratorQueryVo(true)
-                .setRequiresPermissions(true)
-                .setPageListOrder(true)
-                .setParamValidation(true)
-                .setSwaggerTags(true)
-                .setOperationLog(true);
+     // GeneratorConfig
+     generatorProperties.getGeneratorConfig()
+             .setGeneratorStrategy(GeneratorStrategy.SINGLE)
+             .setGeneratorEntity(true)
+             .setGeneratorController(true)
+             .setGeneratorService(true)
+             .setGeneratorServiceImpl(true)
+             .setGeneratorMapper(true)
+             .setGeneratorMapperXml(true)
+             .setGeneratorPageParam(true)
+             .setGeneratorQueryVo(true)
+             .setRequiresPermissions(true)
+             .setPageListOrder(true)
+             .setParamValidation(true)
+             .setSwaggerTags(true)
+             .setOperationLog(true);
 
-        // 全局配置
-        generatorProperties.getMybatisPlusGeneratorConfig().getGlobalConfig()
-                .setOpen(true)
-                .setSwagger2(true)
-                .setIdType(IdType.AUTO)
-                .setDateType(DateType.ONLY_DATE);
+     // GlobalConfig
+     generatorProperties.getMybatisPlusGeneratorConfig().getGlobalConfig()
+             .setOpen(true)
+             .setSwagger2(true)
+             .setIdType(IdType.AUTO)
+             .setDateType(DateType.ONLY_DATE);
 
-        // 策略配置
-        generatorProperties.getMybatisPlusGeneratorConfig().getStrategyConfig()
-                .setNaming(NamingStrategy.underline_to_camel)
-                .setColumnNaming(NamingStrategy.underline_to_camel)
-                .setEntityLombokModel(true)
-                .setRestControllerStyle(true)
-                .setControllerMappingHyphenStyle(true)
-                .setVersionFieldName(GeneratorConstant.VERSION)
-                .setLogicDeleteFieldName(GeneratorConstant.DELETED);
+     // StrategyConfig
+     generatorProperties.getMybatisPlusGeneratorConfig().getStrategyConfig()
+             .setNaming(NamingStrategy.underline_to_camel)
+             .setColumnNaming(NamingStrategy.underline_to_camel)
+             .setEntityLombokModel(true)
+             .setRestControllerStyle(true)
+             .setControllerMappingHyphenStyle(true)
+             .setVersionFieldName(GeneratorConstant.VERSION)
+             .setLogicDeleteFieldName(GeneratorConstant.DELETED);
 
-        // 生成代码
-        CodeGenerator codeGenerator = new CodeGenerator();
-        codeGenerator.generator(generatorProperties);
-    }
+     // Code Generator 
+     CodeGenerator codeGenerator = new CodeGenerator();
+     codeGenerator.generator(generatorProperties);
+ }
 }
 ```
 
@@ -239,7 +225,7 @@ public class SpringBootPlusGenerator {
 > 使用Velocity模版生成代码，可自定义修改代码生成模版
 
 ```text
-spring-boot-plus/generator/src/main/resources
+njfu_osalien_com/generator/src/main/resources
 ```
 
 ```text
@@ -287,14 +273,14 @@ spring-boot-plus/generator/src/main/resources
 > SpringBootAdmin Server启动类，在admin模块中  [http://localhost:8000](http://localhost:8000)
 
 ```text
-spring-boot-plus/admin/src/main/java/io/geekidea/springbootplus/admin/SpringBootPlusAdminApplication
+njfu_osalien_com/admin/src/main/java/com/osalien/njfu/admin/CodingLabAdminApplication
 ```
 
 ```java
 /**
  * Spring Boot Admin Bootstrap Main Class
  *
- * @author geekidea
+ * @author Coding实验室
  * @date 2020/3/20
  **/
 @Slf4j
@@ -302,10 +288,10 @@ spring-boot-plus/admin/src/main/java/io/geekidea/springbootplus/admin/SpringBoot
 @EnableAutoConfiguration
 @EnableAdminServer
 @SpringBootApplication
-public class SpringBootPlusAdminApplication {
+public class CodingLabAdminApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(SpringBootPlusAdminApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(CodingLabAdminApplication.class, args);
         ConfigurableEnvironment environment = context.getEnvironment();
         String serverPort = environment.getProperty("server.port");
         log.info("SpringBootAdmin: http://localhost:" + serverPort);
@@ -318,14 +304,14 @@ public class SpringBootPlusAdminApplication {
 > 项目入口类，在bootstrap模块中  [http://localhost:8888](http://localhost:8888)
 
 ```text
-spring-boot-plus/bootstrap/src/main/java/io/geekidea/springbootplus/SpringBootPlusApplication.java
+njfu_osalien_com/bootstrap/src/main/java/com/osalien/njfu/CodingLabApplication.java
 ```
 
 ```java
 /**
- * spring-boot-plus 项目启动入口
+ * njfu_osalien_com Project Main Class
  *
- * @author geekidea
+ * @author Coding实验室
  * @since 2018-11-08
  */
 @EnableAsync
@@ -335,14 +321,14 @@ spring-boot-plus/bootstrap/src/main/java/io/geekidea/springbootplus/SpringBootPl
 @ServletComponentScan
 @MapperScan({"com.osalien.njfu.**.mapper", "com.example.**.mapper"})
 @SpringBootApplication(scanBasePackages = {"com.osalien.njfu", "com.example"})
-public class SpringBootPlusApplication {
+public class CodingLabApplication {
 
     public static void main(String[] args) {
-        // 启动spring-boot-plus
-        ConfigurableApplicationContext context = SpringApplication.run(SpringBootPlusApplication.class, args);
-        // 打印项目信息
+        // Run spring-boot-plus
+        ConfigurableApplicationContext context = SpringApplication.run(CodingLabApplication.class, args);
+        // Print Project Info
         PrintApplicationInfo.print(context);
-        // 打印项目提示
+        // Print Project Tip
         PrintApplicationInfo.printTip(context);
     }
 
@@ -350,116 +336,24 @@ public class SpringBootPlusApplication {
 ```
 
 ### 5. 访问项目Swagger文档
-[http://47.105.159.10:8888/api/swagger-ui.html](http://47.105.159.10:8888/api/swagger-ui.html)
-![swagger-ui.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/swagger-ui.png)
-![swagger-ui-1.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/swagger-ui-1.png)
+[http://localhost:8888/api/swagger-ui.html](http://localhost:8888/api/swagger-ui.html)
 
 ### 6. 访问Knife4j文档
-[http://47.105.159.10:8888/api/doc.html](http://47.105.159.10:8888/api/doc.html)
-![knife4j.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/knife4j.png)
-![knife4j-1.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/knife4j-1.png)
+[http://localhost:8888/api/doc.html](http://localhost:8888/api/doc.html)
 
-## CentOS快速安装环境/构建/部署/启动spring-boot-plus项目
-### 1. 下载安装脚本
-> 安装 `jdk`, `git`, `maven`, `redis`, `mysql`
-
-```bash
-wget -O download-install-all.sh https://springboot.plus/bin/download-install-all.sh
-```
-
-### 2. 运行安装脚本
-```bash
-sh download-install-all.sh
-```
-
-### 3. 修改MySQL密码
-```bash
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'Springbootplus666!';
-exit
-mysql -uroot -pSpringbootplus666!
-```
-
-### 4. 导入MySQL脚本
-```bash
-create database if not exists spring_boot_plus character set utf8mb4;
-use spring_boot_plus;
-source /root/mysql_spring_boot_plus.sql;
-show tables;
-exit
-```
-
-### 5. 下载部署脚本 `deploy.sh`
-```bash
-wget -O deploy.sh https://springboot.plus/bin/deploy.sh
-```
-
-### 6. 执行脚本
-```bash
-sh deploy.sh
-```
-
-### 7. 查看项目运行日志
-```bash
-tail -f -n 1000 /spring-boot-plus-server-2.0/logs/spring-boot-plus.log
-```
-
-
-## spring-boot-plus Views
-
-### spring-boot-plus IDEA Sources Views
-
-![spring-boot-plus-idea](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/idea.png)
-
-### [Spring Boot Admin Instances](http://47.105.159.10:8000/instances/11090f218c47/details)
-<p>
-    <a href="http://47.105.159.10:8000/instances/11090f218c47/details">
-        <img src="https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootadmin.png" alt="spring-boot-admin instances">
-    </a>
-</p>
-
-### [Spring Boot Admin Statistics](http://47.105.159.10:8000/instances/11090f218c47/details)
-<p>
-    <a href="http://47.105.159.10:8000/instances/11090f218c47/details">
-        <img src="https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootadmin1.png" alt="spring-boot-admin statistics">
-    </a>
-</p>
-
-### [Spring Boot Admin Log](http://47.105.159.10:8000/instances/11090f218c47/logfile)
-<p>
-    <a href="http://47.105.159.10:8000/instances/11090f218c47/logfile">
-        <img src="https://spring-boot-plus.gitee.io/img/home/spring-boot-admin-log.png" alt="spring-boot-admin log">
-    </a>
-</p>
-
-## spring-boot-plus-vue 前端项目
-### [GITHUB-REPO](https://github.com/osalien/njfu_osalien_com-vue)
-### [VUE演示地址](http://47.105.159.10/)
-#### VUE主页
-![VUE主页](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue.png)
-#### 系统用户列表
-![系统用户列表](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue-1.png)
-#### 系统角色列表
-![系统角色模块](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue-2.png)
-#### 系统菜单列表
-![系统菜单列表](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue-3.png)
-
-## spring-boot-plus 视频  :movie_camera:
-- [V2.x 视频介绍慢放版](https://www.bilibili.com/video/BV1HQ4y1M73i/)
-- [V1.x 5分钟完成增删改查](https://www.bilibili.com/video/av67401204)
-- [CentOS 快速安装 JDK/Git/Maven/Redis/MySQL](https://www.bilibili.com/video/av67218836/)
-- [CentOS 快速部署/构建/打包/运行项目](https://www.bilibili.com/video/av67218970/)
-
+## njfu-osalien-com-vue 前端项目
+### [GITHUB-REPO](https://github.com/osalien/njfu_osalien_com_vue)
+### [VUE演示地址](http://njfu.osalien.com)
 
 ## 联系
-QQ 625301326| 微信公众号 geekideaio|  今日头条 GeekIdea
--|-|-
-![spring-boot-plus QQ Group](https://spring-boot-plus.gitee.io/img/spring-boot-plus-qq-group.png) | ![Wechat Official Account](https://geekidea.oss-cn-chengdu.aliyuncs.com/geekidea/geekidea-wechat-official.jpg) | ![toutiao](https://geekidea.oss-cn-chengdu.aliyuncs.com/geekidea/geekidea-toutiao.jpeg) |
+微信公众号 Coding实验室
+
+![Coding实验室](http://oss.osalien.com/CodingLab.jpg)
 
 ## 赞赏
 请作者喝咖啡，让代码飞一会儿！
                           
-![geekidea-wechat-donate](https://geekidea.oss-cn-chengdu.aliyuncs.com/geekidea/geekidea-wechat-donate.jpeg)
+![Coding实验室](http://oss.osalien.com/money.jpg)
 
 ## License
-spring-boot-plus is under the Apache 2.0 license. See the [LICENSE](https://github.com/osalien/njfu_osalien_com/blob/master/LICENSE) file for details.
-
+njfu-osalien-com is under the Apache 2.0 license. 
