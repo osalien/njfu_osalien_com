@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.osalien.njfu.properties;
+package com.osalien.njfu.config.properties;
 
-import com.osalien.njfu.constant.CommonConstant;
+import com.osalien.njfu.config.constant.CommonConstant;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

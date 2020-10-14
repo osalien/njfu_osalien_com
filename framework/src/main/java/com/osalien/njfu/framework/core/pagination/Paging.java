@@ -19,7 +19,7 @@ package com.osalien.njfu.framework.core.pagination;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.osalien.njfu.constant.CommonConstant;
+import com.osalien.njfu.config.constant.CommonConstant;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

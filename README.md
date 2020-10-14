@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/osalien/njfu_osalien_com">
-   <img alt="spring-boot-plus logo" src="https://springboot.plus/img/logo.png">
+   <img alt="njfu logo" src="http://oss.osalien.com/njfu.jpg">
   </a>
 </p>
 <p align="center">
@@ -19,21 +19,14 @@
   </a>
 </p>
 
-## What is spring-boot-plus?
-
-### A **easy-to-use**, **high-speed**, **high-efficient**, **feature-rich**, **open source** spring boot scaffolding.
-> spring-boot-plus is a background rapid development framework that integrates spring boot common development components.
-
-> Front-end and back-end separation, focusing on back-end services
-
 ## Purpose
 > Everyone can develop projects independently, quickly and efficiently！
 
-#### [GITHUB](https://github.com/osalien/njfu_osalien_com) | [GITEE](https://gitee.com/geekidea/spring-boot-plus)
+#### [GITHUB](https://github.com/osalien/njfu_osalien_com)
 
 #### [中文文档](https://github.com/osalien/njfu_osalien_com/blob/master/README-zh.md)
 
-#### [springboot.plus](http://springboot.plus)
+#### [osalien.com](http://osalien.com)
 
 ## Features
 - Integrated spring boot common development component set, common configuration, AOP log, etc
@@ -47,18 +40,11 @@
 - Integrated Spring Boot Admin, real-time detection of project operation
 - Integrate maven-assembly-plugin for different environment package deployment, including startup and restart commands, and extract configuration files to external config directory
 
-## [V2.0 Video Introduction](https://www.bilibili.com/video/BV16A41187XE/)
-<p align="center">
-  <a href="https://www.bilibili.com/video/BV16A41187XE/">
-   <img alt="spring-boot-plus videos" src="https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/videos-acfun-ui.png">
-  </a>
-</p>
-
 ## Project structure
 ```text
-  spring-boot-plus
+  njfu-osalien-com
     ├── admin           SpringBootAdmin Server Module          
-    ├── bootstrap       spring-boot-plus Bootstrap Module    
+    ├── bootstrap       njfu-osalien-com Bootstrap Module    
     ├── config          Config Module
     ├── distribution    Maven assembly Module        
     ├── docs            Document
@@ -101,16 +87,13 @@ lombok | 1.18.12 | Automatically plugs |
 mapstruct | 1.3.1.Final | Object property replication tool |
 
 ### Project Link Diagram
-![项目调用链路图](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/spring-boot-plus-link-diagram.jpg)
-
-### [CHANGELOG](https://github.com/osalien/njfu_osalien_com/blob/master/CHANGELOG.md)
-
+![项目调用链路图](http://oss.osalien.com/link-diagram.jpg)
 
 ## Quick Start
-### Clone spring-boot-plus
+### Clone njfu-osalien-com
 ```bash
 git clone https://github.com/osalien/njfu_osalien_com.git
-cd spring-boot-plus
+cd njfu_osalien_com
 ```
 
 ### Maven Build
@@ -158,18 +141,18 @@ INSERT INTO foo_bar (id, name, foo, bar, remark, state, version, create_time, up
 > Code generation entry class, in the generator module
 
 ```text
-spring-boot-plus/generator/src/main/java/io/geekidea/springbootplus/generator/SpringBootPlusGenerator.java
+njfu_osalien_com/generator/src/main/java/com/osalien/njfu/generator/CodingLabGenerator.java
 ```
 
 ```java
 /**
- * spring-boot-plus Code Generator Main Class
+ * njfu_osalien_com Code Generator Main Class
  *
- * @author geekidea
+ * @author Coding实验室
  * @date 2019-10-22
  **/
 @Component
-public class SpringBootPlusGenerator {
+public class CodingLabGenerator {
 
     /**
      * Generator Code
@@ -183,7 +166,7 @@ public class SpringBootPlusGenerator {
                 .setMavenModuleName("example")
                 .setParentPackage("com.example")
                 .setModuleName("foobar")
-                .setAuthor("geekidea")
+                .setAuthor("Coding实验室")
                 .setFileOverride(true);
 
         // generator Table
@@ -195,7 +178,7 @@ public class SpringBootPlusGenerator {
                 .setUsername("root")
                 .setPassword("root")
                 .setDriverName("com.mysql.jdbc.Driver")
-                .setUrl("jdbc:mysql://localhost:3306/spring_boot_plus?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
+                .setUrl("jdbc:mysql://localhost:3306/njfu_osalien_com?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
 
         // GeneratorConfig
         generatorProperties.getGeneratorConfig()
@@ -242,7 +225,7 @@ public class SpringBootPlusGenerator {
 > Use Velocity template to generate code, you can customize and modify the code to generate template
 
 ```text
-spring-boot-plus/generator/src/main/resources
+njfu_osalien_com/generator/src/main/resources
 ```
 ```text
 └── templates
@@ -289,14 +272,14 @@ spring-boot-plus/generator/src/main/resources
 > SpringBootAdmin Server Main Class，admin module  [http://localhost:8000](http://localhost:8000)
 
 ```text
-spring-boot-plus/admin/src/main/java/io/geekidea/springbootplus/admin/SpringBootPlusAdminApplication
+njfu_osalien_com/admin/src/main/java/com/osalien/njfu/admin/CodingLabAdminApplication
 ```
 
 ```java
 /**
  * Spring Boot Admin Bootstrap Main Class
  *
- * @author geekidea
+ * @author Coding实验室
  * @date 2020/3/20
  **/
 @Slf4j
@@ -304,10 +287,10 @@ spring-boot-plus/admin/src/main/java/io/geekidea/springbootplus/admin/SpringBoot
 @EnableAutoConfiguration
 @EnableAdminServer
 @SpringBootApplication
-public class SpringBootPlusAdminApplication {
+public class CodingLabAdminApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(SpringBootPlusAdminApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(CodingLabAdminApplication.class, args);
         ConfigurableEnvironment environment = context.getEnvironment();
         String serverPort = environment.getProperty("server.port");
         log.info("SpringBootAdmin: http://localhost:" + serverPort);
@@ -320,14 +303,14 @@ public class SpringBootPlusAdminApplication {
 > Project Main Class，bootstrap module  [http://localhost:8888](http://localhost:8888)
 
 ```text
-spring-boot-plus/bootstrap/src/main/java/io/geekidea/springbootplus/SpringBootPlusApplication.java
+njfu_osalien_com/bootstrap/src/main/java/com/osalien/njfu/CodingLabApplication.java
 ```
 
 ```java
 /**
- * spring-boot-plus Project Main Class
+ * njfu_osalien_com Project Main Class
  *
- * @author geekidea
+ * @author Coding实验室
  * @since 2018-11-08
  */
 @EnableAsync
@@ -337,11 +320,11 @@ spring-boot-plus/bootstrap/src/main/java/io/geekidea/springbootplus/SpringBootPl
 @ServletComponentScan
 @MapperScan({"com.osalien.njfu.**.mapper", "com.example.**.mapper"})
 @SpringBootApplication(scanBasePackages = {"com.osalien.njfu", "com.example"})
-public class SpringBootPlusApplication {
+public class CodingLabApplication {
 
     public static void main(String[] args) {
         // Run spring-boot-plus
-        ConfigurableApplicationContext context = SpringApplication.run(SpringBootPlusApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(CodingLabApplication.class, args);
         // Print Project Info
         PrintApplicationInfo.print(context);
         // Print Project Tip
@@ -352,117 +335,23 @@ public class SpringBootPlusApplication {
 ```
 
 ### 4. Access Swagger Docs
-[http://47.105.159.10:8888/api/swagger-ui.html](http://47.105.159.10:8888/api/swagger-ui.html)
-![swagger-ui.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/swagger-ui.png)
-![swagger-ui-1.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/swagger-ui-1.png)
+[http://localhost:8888/api/swagger-ui.html](http://localhost:8888/api/swagger-ui.html)
 
 ### 5. Access Knife4j Docs 
-[http://47.105.159.10:8888/api/doc.html](http://47.105.159.10:8888/api/doc.html)
-![knife4j.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/knife4j.png)
-![knife4j-1.png](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/knife4j-1.png)
+[http://localhost:8888/api/doc.html](http://localhost:8888/api/doc.html)
 
-
-## CentOS Quick Installation Environment / Build / Deploy / Launch Spring-boot-plus Project
-
-### 1. Download the installation script
-> Install `jdk`, `git`, `maven`, `redis`, `mysql`
-
-```bash
-wget -O download-install-all.sh https://springboot.plus/bin/download-install-all.sh
-```
-
-### 2. Run the installation script
-```bash
-sh download-install-all.sh
-```
-
-### 3. Modify MySQL password
-```bash
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'Springbootplus666!';
-exit
-mysql -uroot -pSpringbootplus666!
-```
-
-### 4. Import MySQL scripts
-```bash
-create database if not exists spring_boot_plus character set utf8mb4;
-use spring_boot_plus;
-source /root/mysql_spring_boot_plus.sql;
-show tables;
-exit
-```
-
-### 5. Download deployment script `deploy.sh`
-```bash
-wget -O deploy.sh https://springboot.plus/bin/deploy.sh
-```
-
-### 6. Execution script
-```bash
-sh deploy.sh
-```
-
-### 7. View project run log
-```bash
-tail -f -n 1000 /spring-boot-plus-server-2.0/logs/spring-boot-plus.log
-```
-
-
-## spring-boot-plus Views
-
-### spring-boot-plus IDEA Sources Views
-
-![spring-boot-plus-idea](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/idea.png)
-
-### [Spring Boot Admin Instances](http://47.105.159.10:8000/instances/11090f218c47/details)
-<p>
-    <a href="http://47.105.159.10:8000/instances/11090f218c47/details">
-        <img src="https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootadmin-en.png" alt="spring-boot-admin instances">
-    </a>
-</p>
-
-### [Spring Boot Admin Statistics](http://47.105.159.10:8000/instances/11090f218c47/details)
-<p>
-    <a href="http://47.105.159.10:8000/instances/11090f218c47/details">
-        <img src="https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootadmin-en-1.png" alt="spring-boot-admin statistics">
-    </a>
-</p>
-
-### [Spring Boot Admin Log](http://47.105.159.10:8000/instances/11090f218c47/logfile)
-<p>
-    <a href="http://47.105.159.10:8000/instances/11090f218c47/logfile">
-        <img src="https://springboot.plus/img/home/spring-boot-admin-log-en.png" alt="spring-boot-admin log">
-    </a>
-</p>
-
-## spring-boot-plus-vue Front-end Project
-### [GITHUB-REPO](https://github.com/osalien/njfu_osalien_com-vue)
-### [VUE WebSite](http://47.105.159.10/)
-#### VUE HOME
-![VUE HOME](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue.png)
-#### System User List
-![System User List](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue-1.png)
-#### System Role List
-![System Role List](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue-2.png)
-#### System Menu List
-![System Menu List](https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/springbootplusvue-3.png)
-
-## spring-boot-plus Videos  :movie_camera: 
-- [V2.x Video Introduction](https://www.bilibili.com/video/BV1HQ4y1M73i/)
-- [V1.x 5-Minutes-Finish-CRUD](https://www.bilibili.com/video/av67401204)
-- [CentOS Quick Installation JDK/Git/Maven/Redis/MySQL](https://www.bilibili.com/video/av67218836/)
-- [CentOS Quick Build / Deploy / Launch Spring-boot-plus Project](https://www.bilibili.com/video/av67218970/)
+## njfu-osalien-com-vue Front-end Project
+### [GITHUB-REPO](https://github.com/osalien/njfu_osalien_com_vue)
+### [VUE WebSite](http://njfu.osalien.com)
 
 ## Contact
-QQ 625301326| Wechat geekideaio|  toutiao GeekIdea
--|-|-
-![spring-boot-plus QQ Group](https://spring-boot-plus.gitee.io/img/spring-boot-plus-qq-group.png) | ![Wechat Official Account](https://geekidea.oss-cn-chengdu.aliyuncs.com/geekidea/geekidea-wechat-official.jpg) | ![toutiao](https://geekidea.oss-cn-chengdu.aliyuncs.com/geekidea/geekidea-toutiao.jpeg) |
+ Wechat Coding实验室
 
+![Coding实验室](http://oss.osalien.com/CodingLab.jpg)
 ## Donate
 Ask the author to drink coffee and let the code fly for a while! 
 
-![geekidea-wechat-donate](https://geekidea.oss-cn-chengdu.aliyuncs.com/geekidea/geekidea-wechat-donate.png)
+![Coding实验室](http://oss.osalien.com/money.jpg)
 
 ## License
-spring-boot-plus is under the Apache 2.0 license. See the [LICENSE](https://github.com/osalien/njfu_osalien_com/blob/master/LICENSE) file for details.
-
+njfu-osalien-com is under the Apache 2.0 license. 

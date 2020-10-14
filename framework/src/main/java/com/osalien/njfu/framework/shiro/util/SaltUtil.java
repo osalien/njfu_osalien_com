@@ -16,7 +16,7 @@
 
 package com.osalien.njfu.framework.shiro.util;
 
-import com.osalien.njfu.properties.JwtProperties;
+import com.osalien.njfu.config.properties.JwtProperties;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;

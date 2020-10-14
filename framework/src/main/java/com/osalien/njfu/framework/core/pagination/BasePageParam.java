@@ -16,7 +16,7 @@
 
 package com.osalien.njfu.framework.core.pagination;
 
-import com.osalien.njfu.constant.CommonConstant;
+import com.osalien.njfu.config.constant.CommonConstant;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

@@ -19,7 +19,7 @@ package com.osalien.njfu.framework.util;
 import com.osalien.njfu.framework.shiro.util.JwtTokenUtil;
 import com.osalien.njfu.framework.shiro.util.JwtUtil;
 import com.osalien.njfu.framework.shiro.vo.LoginSysUserRedisVo;
-import com.osalien.njfu.constant.CommonRedisKey;
+import com.osalien.njfu.config.constant.CommonRedisKey;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.redis.core.RedisTemplate;

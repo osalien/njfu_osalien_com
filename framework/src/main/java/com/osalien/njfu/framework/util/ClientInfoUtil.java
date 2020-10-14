@@ -20,7 +20,7 @@ import cn.hutool.http.useragent.UserAgent;
 import cn.hutool.http.useragent.UserAgentUtil;
 import com.osalien.njfu.framework.common.bean.ClientInfo;
 import com.osalien.njfu.framework.common.bean.DeviceInfo;
-import com.osalien.njfu.constant.CommonConstant;
+import com.osalien.njfu.config.constant.CommonConstant;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.regex.Matcher;

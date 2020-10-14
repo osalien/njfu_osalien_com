@@ -22,7 +22,7 @@ import com.osalien.njfu.framework.shiro.cache.LoginRedisService;
 import com.osalien.njfu.framework.shiro.service.ShiroLoginService;
 import com.osalien.njfu.framework.shiro.util.JwtTokenUtil;
 import com.osalien.njfu.framework.shiro.util.JwtUtil;
-import com.osalien.njfu.properties.JwtProperties;
+import com.osalien.njfu.config.properties.JwtProperties;
 import com.osalien.njfu.framework.util.HttpServletResponseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

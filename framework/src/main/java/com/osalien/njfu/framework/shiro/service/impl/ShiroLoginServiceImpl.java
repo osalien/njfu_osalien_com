@@ -17,9 +17,9 @@
 package com.osalien.njfu.framework.shiro.service.impl;
 
 import com.osalien.njfu.framework.shiro.service.ShiroLoginService;
-import com.osalien.njfu.constant.CommonConstant;
-import com.osalien.njfu.properties.JwtProperties;
-import com.osalien.njfu.properties.SpringBootPlusProperties;
+import com.osalien.njfu.config.constant.CommonConstant;
+import com.osalien.njfu.config.properties.JwtProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusProperties;
 import com.osalien.njfu.framework.shiro.cache.LoginRedisService;
 import com.osalien.njfu.framework.shiro.jwt.JwtToken;
 import com.osalien.njfu.framework.shiro.util.JwtTokenUtil;

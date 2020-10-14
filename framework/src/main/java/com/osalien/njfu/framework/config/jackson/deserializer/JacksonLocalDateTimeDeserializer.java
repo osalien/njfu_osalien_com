@@ -19,7 +19,7 @@ package com.osalien.njfu.framework.config.jackson.deserializer;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.osalien.njfu.constant.DatePattern;
+import com.osalien.njfu.config.constant.DatePattern;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;

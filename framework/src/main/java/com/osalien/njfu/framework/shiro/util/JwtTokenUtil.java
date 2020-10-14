@@ -16,7 +16,7 @@
 
 package com.osalien.njfu.framework.shiro.util;
 
-import com.osalien.njfu.properties.JwtProperties;
+import com.osalien.njfu.config.properties.JwtProperties;
 import com.osalien.njfu.framework.util.HttpServletRequestUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

@@ -16,7 +16,7 @@
 
 package com.osalien.njfu.framework.util;
 
-import com.osalien.njfu.constant.DatePattern;
+import com.osalien.njfu.config.constant.DatePattern;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

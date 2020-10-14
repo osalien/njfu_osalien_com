@@ -14,31 +14,14 @@
  * limitations under the License.
  */
 
-package com.osalien.njfu.properties;
-
-import lombok.Data;
+package com.osalien.njfu.config.constant;
 
 /**
- * Shiro权限配置映射类
+ * 可排序查询参数对象
  *
  * @author Coding实验室
- * @date 2019-09-28
- **/
-@Data
-public class ShiroPermissionProperties {
-
-    /**
-     * 路径
-     */
-    private String url;
-    /**
-     * 路径数组
-     */
-    private String[] urls;
-
-    /**
-     * 权限
-     */
-    private String permission;
+ * @since 2019-08-08
+ */
+public interface CacheKey {
 
 }

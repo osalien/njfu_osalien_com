@@ -20,7 +20,7 @@ import com.osalien.njfu.framework.common.service.impl.BaseServiceImpl;
 import com.osalien.njfu.framework.ip.entity.IpAddress;
 import com.osalien.njfu.framework.ip.mapper.IpAddressMapper;
 import com.osalien.njfu.framework.ip.service.IpAddressService;
-import com.osalien.njfu.constant.CommonConstant;
+import com.osalien.njfu.config.constant.CommonConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

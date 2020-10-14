@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.osalien.njfu.properties;
+package com.osalien.njfu.config.properties;
 
 
 import lombok.Data;

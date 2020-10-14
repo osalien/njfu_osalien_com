@@ -20,7 +20,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.osalien.njfu.properties.SpringBootPlusProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusProperties;
 import com.osalien.njfu.framework.common.exception.BusinessException;
 import com.osalien.njfu.framework.common.service.impl.BaseServiceImpl;
 import com.osalien.njfu.framework.core.pagination.PageInfo;

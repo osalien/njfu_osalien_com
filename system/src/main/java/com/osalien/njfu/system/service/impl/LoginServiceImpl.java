@@ -17,9 +17,9 @@
 package com.osalien.njfu.system.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.osalien.njfu.constant.CommonRedisKey;
-import com.osalien.njfu.properties.JwtProperties;
-import com.osalien.njfu.properties.SpringBootPlusProperties;
+import com.osalien.njfu.config.constant.CommonRedisKey;
+import com.osalien.njfu.config.properties.JwtProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusProperties;
 import com.osalien.njfu.framework.shiro.cache.LoginRedisService;
 import com.osalien.njfu.framework.shiro.jwt.JwtToken;
 import com.osalien.njfu.framework.shiro.util.JwtTokenUtil;

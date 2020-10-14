@@ -28,7 +28,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
-import com.osalien.njfu.constant.DatePattern;
+import com.osalien.njfu.config.constant.DatePattern;
 import com.osalien.njfu.framework.config.jackson.deserializer.JacksonDateDeserializer;
 import com.osalien.njfu.framework.config.jackson.deserializer.JacksonDoubleDeserializer;
 import com.osalien.njfu.framework.config.jackson.serializer.JacksonDateSerializer;

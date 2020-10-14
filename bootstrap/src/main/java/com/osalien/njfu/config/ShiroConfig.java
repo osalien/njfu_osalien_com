@@ -17,9 +17,9 @@
 package com.osalien.njfu.config;
 
 import com.alibaba.fastjson.JSON;
-import com.osalien.njfu.properties.JwtProperties;
-import com.osalien.njfu.properties.ShiroPermissionProperties;
-import com.osalien.njfu.properties.ShiroProperties;
+import com.osalien.njfu.config.properties.JwtProperties;
+import com.osalien.njfu.config.properties.ShiroPermissionProperties;
+import com.osalien.njfu.config.properties.ShiroProperties;
 import com.osalien.njfu.framework.shiro.cache.LoginRedisService;
 import com.osalien.njfu.framework.shiro.exception.ShiroConfigException;
 import com.osalien.njfu.framework.shiro.jwt.JwtCredentialsMatcher;

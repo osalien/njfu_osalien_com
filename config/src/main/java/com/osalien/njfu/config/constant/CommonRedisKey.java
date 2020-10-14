@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.osalien.njfu.constant;
+package com.osalien.njfu.config.constant;
 
 /**
  * <p>

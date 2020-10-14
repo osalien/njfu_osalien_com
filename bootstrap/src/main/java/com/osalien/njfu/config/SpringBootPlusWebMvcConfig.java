@@ -17,9 +17,9 @@
 package com.osalien.njfu.config;
 
 import com.alibaba.fastjson.JSON;
-import com.osalien.njfu.properties.SpringBootPlusProperties;
-import com.osalien.njfu.properties.SpringBootPlusFilterProperties;
-import com.osalien.njfu.properties.SpringBootPlusInterceptorProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusFilterProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusInterceptorProperties;
 import com.osalien.njfu.framework.core.filter.RequestDetailFilter;
 import com.osalien.njfu.framework.core.interceptor.PermissionInterceptor;
 import com.osalien.njfu.framework.core.xss.XssFilter;

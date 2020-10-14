@@ -22,7 +22,7 @@ import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
-import com.osalien.njfu.properties.SwaggerProperties;
+import com.osalien.njfu.config.properties.SwaggerProperties;
 import com.osalien.njfu.framework.common.exception.SpringBootPlusConfigException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;

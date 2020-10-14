@@ -17,7 +17,7 @@
 package com.osalien.njfu.config;
 
 
-import com.osalien.njfu.properties.SpringBootPlusCorsProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusCorsProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

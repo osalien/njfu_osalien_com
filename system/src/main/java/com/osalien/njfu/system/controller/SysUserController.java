@@ -16,7 +16,7 @@
 
 package com.osalien.njfu.system.controller;
 
-import com.osalien.njfu.properties.SpringBootPlusProperties;
+import com.osalien.njfu.config.properties.SpringBootPlusProperties;
 import com.osalien.njfu.framework.common.api.ApiResult;
 import com.osalien.njfu.framework.common.controller.BaseController;
 import com.osalien.njfu.framework.core.pagination.Paging;
